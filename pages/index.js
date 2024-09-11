@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ArtPieces from "../components/ArtPieces";
+import Spotlight from "@/components/Spotlight";
 
 const Title = styled.h1`
   position: sticky;
@@ -10,9 +11,18 @@ const Title = styled.h1`
 `;
 
 export default function HomePage({ data }) {
+  const spotlightImg = data[Math.floor(Math.random() * data.length)];
+
   return (
     <>
       <Title>ART GALLERY</Title>
+
+      <Spotlight
+        image={spotlightImg.imageSource}
+        title={spotlightImg.title}
+        artist={spotlightImg.artist}
+      />
+
       <ArtPieces pieces={data} />
     </>
   );
