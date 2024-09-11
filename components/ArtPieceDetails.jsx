@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/link";
 
 const Title = styled.div`
   margin-top: 1rem;
@@ -8,20 +7,12 @@ const Title = styled.div`
   color: white;
 `;
 
-export default function ArtPiecePreview({
-  image,
-  dimensions,
-  title,
-  artist,
-  slug,
-}) {
+export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
     <div>
       <Image src={image} alt={title} width={400} height={500} />
       <Title>
-        <Link href={`/art-pieces/${slug}`}>
-          {title} <i>By</i> {artist}
-        </Link>
+        {title} <i>By</i> {artist}
       </Title>
     </div>
   );
