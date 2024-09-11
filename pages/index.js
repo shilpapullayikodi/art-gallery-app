@@ -5,9 +5,7 @@ const Title = styled.h1`
   position: sticky;
   top: 0;
   text-align: center;
-  padding: 2rem;
-  color: #888;
-  background-color: #33343380;
+  background-color: #aaaaaa80;
   z-index: 999;
 `;
 

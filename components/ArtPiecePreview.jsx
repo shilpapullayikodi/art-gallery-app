@@ -2,10 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const Title = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1rem;
-  color: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: black;
 `;
 
 export default function ArtPiecePreview({ image, dimensions, title, artist }) {
@@ -13,7 +12,7 @@ export default function ArtPiecePreview({ image, dimensions, title, artist }) {
     <div>
       <Image src={image} alt={title} width={500} height={500} />
       <Title>
-        {title} By {artist}
+        {title} <i>By</i> {artist}
       </Title>
     </div>
   );
