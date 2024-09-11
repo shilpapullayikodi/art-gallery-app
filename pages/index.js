@@ -1,7 +1,21 @@
-export default function HomePage() {
+import styled from "styled-components";
+import ArtPieces from "../components/ArtPieces";
+
+const Title = styled.h1`
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  background-color: #33343380;
+  z-index: 999;
+`;
+
+export default function HomePage({ data }) {
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <Title>ART GALLERY</Title>
+      <ArtPieces pieces={data} />
+    </>
   );
 }
