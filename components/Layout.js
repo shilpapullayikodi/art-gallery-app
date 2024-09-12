@@ -2,12 +2,12 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 
 const Container = styled.div`
-  color: white;
+  color: #2d1674;
 `;
 
 const Background = styled.div`
   inset: 0;
-  background-color: black;
+  background-color: #cfd6c2;
   z-index: -1;
   filter: brightness(70%);
   transition: filter 1.2s;

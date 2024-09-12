@@ -5,9 +5,9 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: #638c80;
   padding: 1rem 2rem;
-  font-size: 30px;
+  font-size: 25px;
 `;
 
 const Link = styled(NextLink)`
@@ -18,7 +18,7 @@ const Link = styled(NextLink)`
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: white;
+    background-color: #e2808a;
     color: black;
   }
 
@@ -33,6 +33,7 @@ export default function Navigation() {
     <Container>
       <Link href="/">Spotlight</Link>
       <Link href="/art-pieces">Pieces</Link>
+      <Link href="/favorites">Favorites</Link>
     </Container>
   );
 }

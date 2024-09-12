@@ -5,6 +5,7 @@ const Title = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: white;
+  font-style: italic;
 `;
 
 export default function Spotlight({ image, title, artist }) {
