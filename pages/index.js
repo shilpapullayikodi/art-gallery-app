@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Spotlight from "@/components/Spotlight";
 
 export default function SpotlightPage({ data }) {
-  const spotlightImg = data[Math.floor(Math.random() * data.length)];
+  const spotlightImage = data[Math.floor(Math.random() * data.length)];
 
   return (
     <Spotlight
-      image={spotlightImg.imageSource}
-      title={spotlightImg.title}
-      artist={spotlightImg.artist}
+      image={spotlightImage.imageSource}
+      title={spotlightImage.title}
+      artist={spotlightImage.artist}
     />
   );
 }

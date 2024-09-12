@@ -4,7 +4,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ["example-apis.vercel.app"],
+    domains: ["example-apis.vercel.app"], //hosting
   },
   reactStrictMode: true,
   webpack(config) {

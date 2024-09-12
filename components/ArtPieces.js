@@ -4,7 +4,7 @@ import ArtPiecePreview from "@/components/ArtPiecePreview";
 export default function ArtPieces({ pieces }) {
   return (
     <>
-      {pieces?.map((piece) => (
+      {pieces.map((piece) => (
         <ArtPiecePreview
           key={piece.slug}
           slug={piece.slug}

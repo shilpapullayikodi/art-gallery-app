@@ -5,17 +5,17 @@ export default function ArtPiecePage({ data }) {
   const router = useRouter();
   const pieceSlug = router.query.slug;
 
-  const selectedImg = data.find((piece) => piece.slug === pieceSlug);
+  const selectedImage = data.find((piece) => piece.slug === pieceSlug);
 
   return (
     <div>
       <ArtPiecePreview
-        key={selectedImg.slug}
-        slug={selectedImg.slug}
-        title={selectedImg.name}
-        artist={selectedImg.artist}
-        image={selectedImg.imageSource}
-        dimensions={selectedImg.dimensions}
+        key={selectedImage.slug}
+        slug={selectedImage.slug}
+        title={selectedImage.name}
+        artist={selectedImage.artist}
+        image={selectedImage.imageSource}
+        dimensions={selectedImage.dimensions}
       />
     </div>
   );

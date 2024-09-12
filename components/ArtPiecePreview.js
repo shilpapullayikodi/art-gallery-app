@@ -17,7 +17,14 @@ export default function ArtPiecePreview({
 }) {
   return (
     <div>
-      <Image src={image} alt={title} width={400} height={500} />
+      {
+        <Image
+          src={image}
+          alt={title}
+          width={400}
+          height={500}
+        /> /* image optimization */
+      }
       <Title>
         <Link href={`/art-pieces/${slug}`}>
           {title} <i>By</i> {artist}
