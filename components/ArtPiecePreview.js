@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
+import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
+
+const Container = styled.div`
+  position: relative;
+`;
 
 const Title = styled.div`
   margin-top: 1rem;
@@ -14,9 +19,19 @@ export default function ArtPiecePreview({
   title,
   artist,
   slug,
+  artPiecesInfo,
+  toggleFavourite,
 }) {
+  const artPieceInfo = artPiecesInfo.find((info) => info.slug === slug);
+  const isFavorite = artPieceInfo ? artPieceInfo.isFavourite : false;
+
   return (
-    <div>
+    <Container>
+      <FavoriteButton
+        isFavorite={isFavorite}
+        onToggleFavorite={toggleFavourite}
+        slug={slug}
+      />
       {
         <Image
           src={image}
@@ -30,6 +45,6 @@ export default function ArtPiecePreview({
           {title} <i>By</i> {artist}
         </Link>
       </Title>
-    </div>
+    </Container>
   );
 }

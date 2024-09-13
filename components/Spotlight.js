@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import ArtPiecePreview from "./ArtPiecePreview";
 
 const Title = styled.div`
   margin-top: 1rem;
@@ -8,11 +9,19 @@ const Title = styled.div`
   font-style: italic;
 `;
 
-export default function Spotlight({ image, title, artist }) {
+export default function Spotlight({ piece, artPiecesInfo, toggleFavourite }) {
   return (
     <div>
-      <Image src={image} alt={title} width={500} height={500} />
-      <Title>{artist}</Title>
+      <ArtPiecePreview
+        key={piece.slug}
+        slug={piece.slug}
+        image={piece.imageSource}
+        dimensions={piece.dimensions}
+        title={piece.name}
+        artist={piece.artist}
+        artPiecesInfo={artPiecesInfo}
+        toggleFavourite={toggleFavourite}
+      />
     </div>
   );
 }

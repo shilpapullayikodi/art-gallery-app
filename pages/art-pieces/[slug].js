@@ -10,7 +10,7 @@ const Link = styled(NextLink)`
   font-size: 2em;
 `;
 
-export default function ArtPiecePage({ data }) {
+export default function ArtPiecePage({ data, artPiecesInfo, toggleFavourite }) {
   const router = useRouter();
   const pieceSlug = router.query.slug;
 
@@ -26,6 +26,8 @@ export default function ArtPiecePage({ data }) {
         artist={selectedImage.artist}
         image={selectedImage.imageSource}
         dimensions={selectedImage.dimensions}
+        artPiecesInfo={artPiecesInfo}
+        toggleFavourite={toggleFavourite}
       />
     </div>
   );

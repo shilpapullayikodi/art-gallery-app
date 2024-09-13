@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ArtPiecePreview from "@/components/ArtPiecePreview";
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces({ pieces, artPiecesInfo, toggleFavourite }) {
   return (
     <>
       {pieces.map((piece) => (
@@ -12,6 +12,8 @@ export default function ArtPieces({ pieces }) {
           dimensions={piece.dimensions}
           title={piece.name}
           artist={piece.artist}
+          artPiecesInfo={artPiecesInfo}
+          toggleFavourite={toggleFavourite}
         />
       ))}
     </>
