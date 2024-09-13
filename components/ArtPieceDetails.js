@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import FavoriteButton from "./FavoriteButton";
 
 const Title = styled.div`
   margin-top: 1rem;
@@ -7,9 +8,24 @@ const Title = styled.div`
   color: white;
 `;
 
-export default function ArtPieceDetails({ image, title, artist, year, genre }) {
+export default function ArtPieceDetails({
+  image,
+  title,
+  artist,
+  year,
+  genre,
+  isFavorite,
+  onToggleFavorite,
+  slug,
+}) {
+  function onToggleFavorite() {}
   return (
     <div>
+      <FavoriteButton
+        isFavorite={isFavorite}
+        slug={slug}
+        onToggleFavorite={onToggleFavorite}
+      />
       <Image src={image} alt={title} width={400} height={500} />
       <Title>
         {title} <i>By</i> {artist}
