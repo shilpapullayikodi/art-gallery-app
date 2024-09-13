@@ -1,5 +1,14 @@
 import ArtPiecePreview from "@/components/ArtPiecePreview";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
+import styled from "styled-components";
+
+const Link = styled(NextLink)`
+  color: black;
+  text-decoration: none;
+  padding-botton: 20px;
+  font-size: 2em;
+`;
 
 export default function ArtPiecePage({ data }) {
   const router = useRouter();
@@ -9,6 +18,7 @@ export default function ArtPiecePage({ data }) {
 
   return (
     <div>
+      <Link href="/art-pieces">{"←"}</Link>
       <ArtPiecePreview
         key={selectedImage.slug}
         slug={selectedImage.slug}
